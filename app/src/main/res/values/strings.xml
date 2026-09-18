@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">مهندس ANTER</string>
+    <string name="server_url">http://127.0.0.1:5052/</string>
+    <string name="offline_title">الخادم غير مشغّل</string>
+    <string name="offline_message">شغّل الخادم في Termux:\n\ncd ~/anter-assistant\nsource venv/bin/activate\npython3 app.py</string>
+    <string name="retry">إعادة المحاولة</string>
+</resources>
