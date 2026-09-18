@@ -45,8 +45,14 @@ class MainActivity : AppCompatActivity() {
 
         configureWebView()
 
+        swipeRefresh.isEnabled = false
         swipeRefresh.setOnRefreshListener {
             webView.reload()
+        }
+
+        // تفعيل SwipeRefreshLayout فقط عندما يكون WebView في الأعلى
+        webView.setOnScrollChangeListener { _, _, scrollY, _, _ ->
+            swipeRefresh.isEnabled = (scrollY == 0)
         }
 
         retryButton.setOnClickListener {
